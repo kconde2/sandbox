@@ -33,6 +33,12 @@ Git:
 
 * Copy configuration file: ``cp .env .env.local``
 * Edit ``.env.local`` to configure own environment
+* If you use docker-compose, run these commands to generate certificate files :
+
+```shell
+cd .certs
+openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout certificate-key.pem -out certificate.pem
+```
 
 ### Load fixtures data 
 
